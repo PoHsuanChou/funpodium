@@ -1,0 +1,3 @@
+2024-02-24 20:44:00,178 INFO [restartedMain] Starting Demo1Application using Java 17.0.2 with PID 21531 (/Users/chous/Desktop/demo1/target/classes started by chous in /Users/chous/Desktop/demo1)
+2024-02-24 20:44:00,179 DEBUG [restartedMain] Running with Spring Boot v3.2.2, Spring v6.1.3
+2024-02-24 20:44:00,179 INFO [restartedMain] No active profile set, falling back to 1 default profile: "default"

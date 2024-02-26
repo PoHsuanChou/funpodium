@@ -1,0 +1,27 @@
+create database btc_database;
+
+-- 創建 Users 表
+CREATE TABLE IF NOT EXISTS users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+-- 創建 Account 表
+CREATE TABLE IF NOT EXISTS account (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    balance INT DEFAULT 0,
+    btc_amount INT DEFAULT 0,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- 創建 History 表
+CREATE TABLE IF NOT EXISTS history (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    buybtc_price INT DEFAULT 0,
+    btc_ammount INT DEFAULT 0,
+    after_buy_balance INT DEFAULT 0,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

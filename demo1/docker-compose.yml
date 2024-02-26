@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  db:
+    image: mysql/mysql-server:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'btc_database'
+      MYSQL_ROOT_PASSWORD: 'springboot'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '3300:3306'
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - "8083:8083"
+    depends_on:
+      - db
+  
